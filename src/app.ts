@@ -1,15 +1,15 @@
 import cors from 'cors';
-import express, { Application, Request, Response } from 'express';
+import express, {Application, Request} from 'express';
 
 const app: Application = express();
 
 // MIDDLEWARE
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({extended: true}));
 
-app.get(`/`, (req: Request, res: Response) => {
-  res.send('server is running....');
+app.get(`/`, (req: Request, res: any) => {
+	res.send('server is running....');
 });
 
 export default app;
