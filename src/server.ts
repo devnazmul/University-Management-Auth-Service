@@ -1,18 +1,18 @@
-import mongoose from 'mongoose';
-import app from './app';
-import config from './config/index';
+import mongoose from 'mongoose'
+import app from './app'
+import config from './config/index'
 
-const PORT = config.PORT;
+async function boostrap() {
+  try {
+    await mongoose.connect(config.DATABASE_URL as string)
+    console.log(`🛢   Database is connected successfully`)
 
-const bootstrap = async () => {
-	try {
-		await mongoose.connect(config.DATABASE_CONNECTION_STRING as string);
-		app.listen(PORT, () => {
-			console.log(`Server is running on http://localhost:${PORT}`);
-		});
-	} catch (error) {
-		console.log(`Connection failed.`);
-	}
-};
+    app.listen(config.PORT, () => {
+      console.log(`Application  listening on port ${config.PORT}`)
+    })
+  } catch (err) {
+    console.log('Failed to connect database', err)
+  }
+}
 
-bootstrap();
+boostrap()

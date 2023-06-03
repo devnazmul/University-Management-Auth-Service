@@ -1,15 +1,21 @@
-import cors from 'cors';
-import express, {Application, Request} from 'express';
+import cors from 'cors'
+import express, { Application, Request, Response } from 'express'
+// import usersRouter from './app/modules/users/users.route'
+const app: Application = express()
 
-const app: Application = express();
+app.use(cors())
 
-// MIDDLEWARE
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+//parser
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
-app.get(`/`, (req: Request, res: any) => {
-	res.send('server is running....');
-});
+// Application routes
 
-export default app;
+// app.use('/api/v1/users/', usersRouter)
+
+//Testing
+app.get('/', async (req: Request, res: Response) => {
+  res.send('Working Successfully')
+})
+
+export default app

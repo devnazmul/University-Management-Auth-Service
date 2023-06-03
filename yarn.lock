@@ -339,7 +339,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.59.8":
+"@typescript-eslint/eslint-plugin@npm:^5.59.7":
   version: 5.59.8
   resolution: "@typescript-eslint/eslint-plugin@npm:5.59.8"
   dependencies:
@@ -363,7 +363,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.59.8":
+"@typescript-eslint/parser@npm:^5.59.7":
   version: 5.59.8
   resolution: "@typescript-eslint/parser@npm:5.59.8"
   dependencies:
@@ -1035,10 +1035,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:^16.1.1":
-  version: 16.1.1
-  resolution: "dotenv@npm:16.1.1"
-  checksum: e3786267ce7951e747edef6bf45ac60fdba8b846201f82f8811b7222e78aef9cdc51763f07696934d4feebab2ab4d01b1d61ac9301919a8f317dc66672127814
+"dotenv@npm:^16.0.3":
+  version: 16.1.3
+  resolution: "dotenv@npm:16.1.3"
+  checksum: 8f73bae720161cf365b679de162fe79a05f5b7a21d0d2b8bf9fb0601a2ed30f7e9dc49fa8b752d93206e4b7d427eccea2f383a1622cd5da4a1824f43bf8f780b
   languageName: node
   linkType: hard
 
@@ -2589,15 +2589,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pinst@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "pinst@npm:3.0.0"
-  bin:
-    pinst: bin.js
-  checksum: 4ae48a6a60f79c37071233af51b4d91bfc85cfa3c12b66ccda60cdb642b4d14a4ab0cb3587afc55b1f6192cea1772a5e4822026a0d0d3528296edef00cc2d61f
-  languageName: node
-  linkType: hard
-
 "prelude-ls@npm:^1.2.1":
   version: 1.2.1
   resolution: "prelude-ls@npm:1.2.1"
@@ -3373,23 +3364,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"universitymanagementapp@workspace:.":
+"university-management-auth-service@workspace:.":
   version: 0.0.0-use.local
-  resolution: "universitymanagementapp@workspace:."
+  resolution: "university-management-auth-service@workspace:."
   dependencies:
     "@types/cors": ^2.8.13
     "@types/express": ^4.17.17
-    "@typescript-eslint/eslint-plugin": ^5.59.8
-    "@typescript-eslint/parser": ^5.59.8
+    "@typescript-eslint/eslint-plugin": ^5.59.7
+    "@typescript-eslint/parser": ^5.59.7
     cors: ^2.8.5
-    dotenv: ^16.1.1
+    dotenv: ^16.0.3
     eslint: ^8.41.0
     eslint-config-prettier: ^8.8.0
     express: ^4.18.2
     husky: ^8.0.3
     lint-staged: ^13.2.2
     mongoose: ^7.2.1
-    pinst: ^3.0.0
     prettier: ^2.8.8
     ts-node-dev: ^2.0.0
     typescript: ^5.0.4
