@@ -1,20 +1,24 @@
-import cors from 'cors'
-import express, { Application, Request, Response } from 'express'
-import usersRouter from './app/modules/users/users.route'
-const app: Application = express()
+import cors from 'cors';
+import express, { Application } from 'express';
+import usersRouter from './app/modules/users/user.route';
+import globalErrorHandler from './middlewares/globalErrorHandler';
+const app: Application = express();
 
-app.use(cors())
+app.use(cors());
 
 //parser
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Application routes
-app.use('/api/v1.0/users/', usersRouter)
+app.use('/api/v1.0/users/', usersRouter);
 
 //Testing
-app.get('/', async (req: Request, res: Response) => {
-  res.send('Working Successfully')
-})
+// app.get('/', async (req: Request, res: Response) => {
+//   Promise.reject(new Error(`Unhandle Promise Rejection`))
+// })
 
-export default app
+// ERROR HANDLER MIDDLEWARE
+app.use(globalErrorHandler);
+
+export default app;
